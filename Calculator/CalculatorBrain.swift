@@ -4,7 +4,8 @@
 //
 //  Created by Zach Ziemann on 9/12/16.
 //  Copyright © 2016 Zach Ziemann. All rights reserved.
-//
+
+//  This code contains a lot of my own notes from lectures
 
 import Foundation
 
@@ -149,6 +150,7 @@ class CalculatorBrain
     }
     //documentation here that our program is a propertylist
     typealias PropertyList = AnyObject
+    
     var program: PropertyList {
         get{
             //returning a copy, not a point so it's safe
@@ -160,7 +162,8 @@ class CalculatorBrain
                 for op in arrayOfOps {
                     if let operand = op as? Double {
                         setOperand(operand)
-                    }else if let operation = op as? String {
+                    }
+                    else if let operation = op as? String {
                         performOperation(operation)
                     }
                 }
@@ -172,7 +175,6 @@ class CalculatorBrain
     var result: Double {
         get {
             return accumulator
-            
         }
     }
 }

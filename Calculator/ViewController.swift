@@ -5,6 +5,7 @@
 //  Created by Zach Ziemann on 9/8/16.
 //  Copyright © 2016 Zach Ziemann. All rights reserved.
 
+//  This code contains a lot of my own notes from lectures
 
 //  Don't do calculations in a controllers
 
