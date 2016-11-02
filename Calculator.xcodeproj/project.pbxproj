@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921B54691D878EAA00306A9C /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B54681D878EAA00306A9C /* CalculatorBrain.swift */; };
 		926A73901D81CCA500945AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A738F1D81CCA500945AF3 /* AppDelegate.swift */; };
 		926A73921D81CCA500945AF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A73911D81CCA500945AF3 /* ViewController.swift */; };
 		926A73951D81CCA500945AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926A73931D81CCA500945AF3 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921B54681D878EAA00306A9C /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		926A738C1D81CCA400945AF3 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926A738F1D81CCA500945AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		926A73911D81CCA500945AF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,12 +99,10 @@
 		926A738E1D81CCA400945AF3 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				926A738F1D81CCA500945AF3 /* AppDelegate.swift */,
+				926A73BD1D81CE8D00945AF3 /* New Group */,
 				926A73911D81CCA500945AF3 /* ViewController.swift */,
 				926A73931D81CCA500945AF3 /* Main.storyboard */,
-				926A73961D81CCA500945AF3 /* Assets.xcassets */,
-				926A73981D81CCA500945AF3 /* LaunchScreen.storyboard */,
-				926A739B1D81CCA500945AF3 /* Info.plist */,
+				921B54681D878EAA00306A9C /* CalculatorBrain.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				926A73B11D81CCA500945AF3 /* Info.plist */,
 			);
 			path = CalculatorUITests;
+			sourceTree = "<group>";
+		};
+		926A73BD1D81CE8D00945AF3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				926A738F1D81CCA500945AF3 /* AppDelegate.swift */,
+				926A73961D81CCA500945AF3 /* Assets.xcassets */,
+				926A73981D81CCA500945AF3 /* LaunchScreen.storyboard */,
+				926A739B1D81CCA500945AF3 /* Info.plist */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				TargetAttributes = {
 					926A738B1D81CCA400945AF3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XQZ865KTSM;
 					};
 					926A739F1D81CCA500945AF3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921B54691D878EAA00306A9C /* CalculatorBrain.swift in Sources */,
 				926A73921D81CCA500945AF3 /* ViewController.swift in Sources */,
 				926A73901D81CCA500945AF3 /* AppDelegate.swift in Sources */,
 			);
@@ -401,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zz.Calculator;
@@ -412,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zz.Calculator;
@@ -484,6 +499,7 @@
 				926A73B61D81CCA500945AF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		926A73B71D81CCA500945AF3 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +508,7 @@
 				926A73B91D81CCA500945AF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		926A73BA1D81CCA500945AF3 /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +517,7 @@
 				926A73BC1D81CCA500945AF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
