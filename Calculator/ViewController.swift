@@ -35,7 +35,16 @@ class ViewController: UIViewController {
             var tempy = display.text!
             tempy.removeAtIndex(tempy.endIndex.predecessor())
             displayValue = Double(tempy)!
-            
+        
+        }
+        else{
+            //undo button
+            savedProgram2 = brain.program
+            let progLen = savedProgram2!.count-1
+            //print(String(progLen))
+            savedProgram2!.removeObjectAtIndex(progLen)
+            brain.program = savedProgram2!
+            displayValue = brain.result
         }
     }
     
@@ -96,6 +105,33 @@ class ViewController: UIViewController {
         }
     }
     
+    var savedProgram2: CalculatorBrain.PropertyList?
+    
+    //extra code from lecture
+    var savedProgram: CalculatorBrain.PropertyList?
+    
+    @IBAction func save() {
+        savedProgram = brain.program
+    }
+    
+    @IBAction func restore() {
+        if savedProgram != nil {
+            brain.program = savedProgram!
+            displayValue = brain.result
+        }
+    }
+    
+    @IBAction func getMemvar() {
+        if let memval = brain.variableValues["M"]
+        {
+            brain.setOperand("M")
+            displayValue = memval
+        }
+    }
+    
+    @IBAction func setMemvar() {
+        brain.variableValues["M"] = displayValue
+    }
     
     //"that big green arrow where the controller talks to the model (brain)"
     //we initialized the brain, don't forget that

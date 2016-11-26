@@ -24,6 +24,11 @@ class CalculatorBrain
         internalProgram.append(operand)
     }
     
+    func setOperand(operand: String) {
+        accumulator = variableValues[operand]!
+        internalProgram.append(accumulator)
+    }
+    
     func setHistory(history: String) {
         descriptionString = history
     }
@@ -35,7 +40,13 @@ class CalculatorBrain
         unaryPrevious = false
         pending = nil
         internalProgram.removeAll()
+        variableValues.removeAll()
     }
+    
+    var variableValues: Dictionary<String, Double> = [
+        :
+        //"M" : 0.0
+    ]
     
     //dictionary is swift thing, generic type
     //first parameter of dictionary is key, second is value
@@ -149,6 +160,7 @@ class CalculatorBrain
         }
     }
     //documentation here that our program is a propertylist
+    //made a property list the same thing as anyobject
     typealias PropertyList = AnyObject
     
     var program: PropertyList {
@@ -158,16 +170,22 @@ class CalculatorBrain
         }
         set{
             clearHistory()
+            //if the program is an array of ops and operations
+            //as an array of any objects
             if let arrayOfOps = newValue as? [AnyObject] {
+                //looping through our variable which should be our program
                 for op in arrayOfOps {
+                    //if its an operand then setOperand and run program
                     if let operand = op as? Double {
                         setOperand(operand)
                     }
+                    //but if we see its an operation then we run that operation
                     else if let operation = op as? String {
                         performOperation(operation)
                     }
                 }
             }
+            print("ERROR: did not pass an array of AnyObject")
         }
     }
     
