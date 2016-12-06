@@ -1,6 +1,14 @@
  HOMEWORK 3
  Zach Ziemann
  
- Provide a summary of what doesn't work in your solution, along with an explanation of how you attempted to solve the problem and where you feel you struggled. 
+ Provide a summary of what doesn't work in your solution, 
+ along with an explanation of how you attempted to solve the problem and where you feel you struggled. 
  
-This homework works for the assignement. It builds off the first 2 assignments with some updates to files. The calculator can now graph what number is in the display on the graph.  The graph can be zoomed and panned with gestures, and it keeps the correct origin. It works on both iPad and iPhone, and has split view for iPad. Sometimes the gestures act a little strange but overall works fine.  I did this as close as I could (without having the actual teacher to explain parts, since I was building off my own work not his). 
+This homework works for the assignement. 
+It builds off the first 2 assignments with some updates to files. 
+The calculator can now graph what number is in the display on the graph.  
+The graph can be zoomed and panned with gestures, and it keeps the correct origin. 
+It works on both iPad and iPhone, and has split view for iPad. 
+Sometimes the gestures act a little strange but overall works fine.  
+I did this as close as I could (without having the actual teacher to explain parts, 
+since I was building off my own work not his). 
