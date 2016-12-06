@@ -11,7 +11,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
     //property
     @IBOutlet private weak var display: UILabel!
@@ -110,6 +110,8 @@ class ViewController: UIViewController {
     //extra code from lecture
     var savedProgram: CalculatorBrain.PropertyList?
     
+    
+    
     @IBAction func save() {
         savedProgram = brain.program
     }
@@ -153,6 +155,23 @@ class ViewController: UIViewController {
         displayValue = brain.result
         historyValue = brain.description
     }
-
+    
+    
+    //var graphView: GraphView!
+    
+    
+    @IBAction func graphFunction()
+    {
+        //graphView.setFunction(CGFloat(displayValue))
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+            if let destination = segue.destinationViewController as? GraphViewController {
+                destination.functionToGraph(CGFloat(displayValue))
+        }
+    }
+    
 }
 
